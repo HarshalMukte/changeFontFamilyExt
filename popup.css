@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Avenir, sans-serif;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 25px;
+  width: 400px;
+  min-height: 400px;
+  background-color: #fff;
+   /* for background */
+  background-image: radial-gradient(
+    farthest-side at bottom,
+    rgba(65, 185, 255, 0.255) 0%,
+    rgb(255, 255, 255) 100%
+  );
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+h1, h2, p{
+  color: #333;
+}
+
+#domain-name{
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+}
+
+#reset-btn{
+     border: none;
+     background-color: transparent;
+     font-size: 14px;
+     color: #333;
+     margin-top: 20px;
+     font-weight: 600;
+}
+
+.control {
+  margin-top: 20px;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.font-select, .style-select {
+  position: relative;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.font-select:hover, .style-select:hover {
+  box-shadow: 2px 2px 5px 1px rgba(65, 185, 255, 0.206);
+}
+
+.dropdown-icon {
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+  width: 30px;
+}
+
+.font-options, .style-options{
+  position: absolute;
+  left: 0;
+    top: 100%;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* height: 150px; */
+  height: 0;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  margin-top: 5px;
+  transform-origin: top;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Styles for the font-options dropdown */ */
+.font-options {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, height 0.3s;
+}
+
+.font-options.show {
+  opacity: 1;
+  height: 150px; /* Height specific to font-options */
+  pointer-events: all;
+}
+
+/* Styles for the style-options dropdown */
+.style-options {
+  opacity: 0;
+  height: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, height 0.3s;
+}
+
+.style-options.show {
+  opacity: 1;
+  height: 100px; /* Height specific to style-options */
+  pointer-events: all;
+}
+
+.font-option, .style-option{
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-size: 14px;
+}
+
+.font-option:hover, .style-option:hover {
+  background-color: rgba(65, 185, 255, 0.201);
+}
+.selected-style, .selected-font{
+  font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* for button */
+.btn{
+    position: relative;
+  padding: 19px 22px;
+  transition: all .2s ease;
+  color: #111;
+}
+.btn:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 28px;
+    background: rgba(65, 185, 255, 0.692);
+    /* background: rgba(255, 180, 192, 0.669); */
+    width: 54px;
+    height: 54px;
+    transition: all .3s ease;
+}
+.btn span{
+    position: relative;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 900;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+  .btn:hover::before{
+      width: 100%;
+      background: rgba(65, 185, 255, 0.806);
+      /* background: rgba(255, 180, 193, 0.849); */
+  }
+  .btn:active{
+      transform: scale(.96)
+  }
+
+
+  /* bottom title */
+  .bottom-title{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 5px;
+    font-size: 16px;
+    margin-top: 50px;
+    font-weight: 600;
+  }
+
+  .bottom-title img{
+    width: 26px;
+    width: 26px !important;
+    transition: sacle .3s ease-in-out;;
+  }
+  .bottom-title img:hover{
+    scale: 1.1;
+  }
+  .bottom-title .linkBtn{
+    position: relative;
+  }
+  .bottom-title .linkBtn::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: rgb(65, 185, 255);
+    left: 0px;
+    bottom: -10%;
+    transition: width .3s ease-in;
+  }
+
+  .bottom-title .linkBtn:hover::after{
+    width: 100%;
+  }
+
+
+/* cumstome scrollbar */
+.body, *{
+  scrollbar-width: 3px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(65, 185, 255, 0.735) #fff;
+}
+

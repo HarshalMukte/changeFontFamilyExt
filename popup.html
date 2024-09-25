@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Changer</title>
+    <link rel="stylesheet" href="popup.css" />
+
+    <!-- font awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+  </head>
+  <body>
+    <div class="container">
+      <h2 id="domain-name">Current Domain</h2>
+
+      <button id="reset-btn" class="btn">
+        <span> Reset Font </span>
+      </button>
+
+      <div class="control">
+        <label for="font-select">Select Font:</label>
+        <div id="font-select" class="font-select">
+          <span id="selected-font" class="selected-font">Select Font</span>
+          <img
+            id="font-dropdown-icon"
+            class="dropdown-icon"
+            src="/assets/drop-down-icon.png"
+            alt="drop-down-icon.png"
+          />
+          <div id="font-options" class="font-options">
+            <!-- Custom dropdown for fonts will be dynamically populated here -->
+          </div>
+        </div>
+      </div>
+
+      <div class="control">
+        <label for="style-select">Select Style:</label>
+        <div id="style-select" class="style-select">
+          <span id="selected-style" class="selected-style">Select Style</span>
+          <img
+            id="style-dropdown-icon"
+            class="dropdown-icon"
+            src="/assets/drop-down-icon.png"
+            alt="drop-down-icon.png"
+          />
+          <div id="style-options" class="style-options">
+            <div class="style-option" data-font-value="400">Normal</div>
+            <div class="style-option" data-font-value="700"><b>Bold</b></div>
+            <div class="style-option" data-font-value="italic"><i>Italic</i></div>
+            <div class="style-option" data-font-value="700italic">
+              <i><b>Bold Italic</b></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="bottom-title">
+        ~ created with
+        <img src="/assets/heart.gif" alt="heart" />
+        by
+        <a class="linkBtn" target="_blank" href="https://harshal-mukte.vercel.app/">
+          <span> HARSHAL MUKTE </span>
+        </a>
+      </h2>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
